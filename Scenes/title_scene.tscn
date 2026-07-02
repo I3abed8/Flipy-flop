@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://chvmwlbg3b7j8"]
+
+[ext_resource type="Texture2D" uid="uid://cnx1b5n756x0j" path="res://crissa-mountains-no-birds.png" id="1_68ljo"]
+[ext_resource type="Script" uid="uid://dmbxo4t066yv1" path="res://Scenes/title_scene.gd" id="1_b6ftn"]
+
+[node name="Titlescreen" type="Node2D" unique_id=1006137343]
+script = ExtResource("1_b6ftn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1358925514]
+offset_left = -0.00012207031
+offset_right = 3200.0
+offset_bottom = 1967.0
+scale = Vector2(0.36015713, 0.33225667)
+texture = ExtResource("1_68ljo")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1218493863]
+offset_left = 309.0
+offset_top = 124.0
+offset_right = 904.0
+offset_bottom = 401.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "Flipy Flop"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1264288117]
+offset_left = 461.0
+offset_top = 308.0
+offset_right = 645.0
+offset_bottom = 525.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1876211989]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=333458917]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1167949020]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
