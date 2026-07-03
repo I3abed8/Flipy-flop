@@ -8,37 +8,37 @@
 script = ExtResource("1_c7xwe")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2145351664]
-offset_left = 11.0
-offset_top = 4.0
-offset_right = 3211.0
-offset_bottom = 1971.0
+offset_left = -0.99999905
+offset_top = -2.0
+offset_right = 3232.675
+offset_bottom = 1983.2341
 scale = Vector2(0.35634783, 0.32905352)
 texture = ExtResource("1_cn3xy")
 
-[node name="Garlic Container" type="HBoxContainer" parent="." unique_id=108108047]
+[node name="Bomb Container" type="HBoxContainer" parent="." unique_id=108108047]
 offset_left = 220.99998
 offset_top = 90.0
 offset_right = 20717.0
 offset_bottom = 4186.0
 scale = Vector2(0.03317479, 0.042577337)
 
-[node name="Garlic" type="TextureRect" parent="Garlic Container" unique_id=550947172]
+[node name="Bomb" type="TextureRect" parent="Bomb Container" unique_id=550947172]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 
-[node name="Garlic2" type="TextureRect" parent="Garlic Container" unique_id=919478711]
+[node name="Bomb2" type="TextureRect" parent="Bomb Container" unique_id=919478711]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 
-[node name="Garlic3" type="TextureRect" parent="Garlic Container" unique_id=553528943]
+[node name="Bomb3" type="TextureRect" parent="Bomb Container" unique_id=553528943]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 
-[node name="Garlic4" type="TextureRect" parent="Garlic Container" unique_id=2134662833]
+[node name="Bomb4" type="TextureRect" parent="Bomb Container" unique_id=2134662833]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 
-[node name="Garlic5" type="TextureRect" parent="Garlic Container" unique_id=1430979840]
+[node name="Bomb5" type="TextureRect" parent="Bomb Container" unique_id=1430979840]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 
@@ -52,10 +52,10 @@ theme_override_font_sizes/normal_font_size = 42
 text = "Level: #"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=1648112323]
-offset_left = 465.0
-offset_top = 438.0
-offset_right = 688.0
-offset_bottom = 505.0
+offset_left = 525.0
+offset_top = 439.0
+offset_right = 748.0
+offset_bottom = 506.0
 theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 theme_override_font_sizes/normal_font_size = 42
-text = "Timer: 0.0"
+text = "0.0"
