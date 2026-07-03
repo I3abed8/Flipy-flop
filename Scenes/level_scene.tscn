@@ -1,7 +1,59 @@
 [gd_scene format=3 uid="uid://cqmxqeqrom665"]
 
+[ext_resource type="Texture2D" uid="uid://cnx1b5n756x0j" path="res://crissa-mountains-no-birds.png" id="1_cn3xy"]
+[ext_resource type="Texture2D" uid="uid://rkvrujglvtyc" path="res://pixellabs-ai-generated-9817714.png" id="2_cn3xy"]
+
 [node name="Node2D" type="Node2D" unique_id=810614299]
 
 [node name="Background" type="TextureRect" parent="." unique_id=2145351664]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 11.0
+offset_top = 4.0
+offset_right = 3211.0
+offset_bottom = 1971.0
+scale = Vector2(0.35634783, 0.32905352)
+texture = ExtResource("1_cn3xy")
+
+[node name="Garlic Container" type="HBoxContainer" parent="." unique_id=108108047]
+offset_left = 216.0
+offset_top = 94.00001
+offset_right = 20712.0
+offset_bottom = 4190.0
+scale = Vector2(0.03635616, 0.042320408)
+
+[node name="Garlic" type="TextureRect" parent="Garlic Container" unique_id=550947172]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+
+[node name="Garlic2" type="TextureRect" parent="Garlic Container" unique_id=919478711]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+
+[node name="Garlic3" type="TextureRect" parent="Garlic Container" unique_id=553528943]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+
+[node name="Garlic4" type="TextureRect" parent="Garlic Container" unique_id=2134662833]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+
+[node name="Garlic5" type="TextureRect" parent="Garlic Container" unique_id=1430979840]
+layout_mode = 2
+texture = ExtResource("2_cn3xy")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=948371199]
+offset_left = 476.0
+offset_top = 314.0
+offset_right = 646.0
+offset_bottom = 375.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Level: #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1648112323]
+offset_left = 456.0
+offset_top = 437.0
+offset_right = 679.0
+offset_bottom = 504.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Timer: 0.0"
