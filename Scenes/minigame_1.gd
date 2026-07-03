@@ -25,8 +25,10 @@ func _process(delta: float) -> void: # running every frame brochacho
 		if Global.minigames_done > 3: # we access a global script and see how many minigames have been compeleted
 			get_tree().change_scene_to_file("res://scenes/done_screen.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
 		else:
+			Global.minigames_done += 1
 			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn") # go back to the intermission scene
-	
+			
+			
 	if timer_end: # if the timer does end...
 		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1 # lose ur lives
@@ -36,15 +38,3 @@ func _process(delta: float) -> void: # running every frame brochacho
 func bomb_collect() -> void: # cool function that you connect to those garlics
 	bomb_collected = bomb_collected +1
 	return
-
-
-func _on_bomb_bomb_collected() -> void:
-	pass # Replace with function body.
-
-
-func _on_bomb_3_bomb_collected() -> void:
-	pass # Replace with function body.
-
-
-func _on_bomb_2_bomb_collected() -> void:
-	pass # Replace with function body.

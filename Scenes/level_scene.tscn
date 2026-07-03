@@ -43,19 +43,23 @@ layout_mode = 2
 texture = ExtResource("2_cn3xy")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=948371199]
-offset_left = 493.0
+clip_contents = false
+offset_left = 495.0
 offset_top = 312.0
-offset_right = 663.0
-offset_bottom = 373.0
-theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+offset_right = 769.0
+offset_bottom = 379.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
-text = "Level: # +"
+text = "Level: # "
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=1648112323]
-offset_left = 525.0
-offset_top = 439.0
-offset_right = 748.0
-offset_bottom = 506.0
-theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+clip_contents = false
+offset_left = 526.0
+offset_top = 421.0
+offset_right = 749.0
+offset_bottom = 488.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
 text = "0.0"

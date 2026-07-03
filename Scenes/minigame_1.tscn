@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bnt0wgqrnv2g3" path="res://Scenes/minigame_1.gd" id="1_ojqsy"]
 [ext_resource type="PackedScene" uid="uid://c2b5v70uxk3k7" path="res://Scenes/character.tscn" id="2_11mgy"]
-[ext_resource type="Texture2D" uid="uid://rkvrujglvtyc" path="res://pixellabs-ai-generated-9817714.png" id="3_f6tb2"]
 [ext_resource type="Script" uid="uid://cb4iueqy1y2aq" path="res://Scenes/bomb.gd" id="4_jmcek"]
+[ext_resource type="Texture2D" uid="uid://by3sw3l2hcr0f" path="res://icons8-apple-96.png" id="4_ojqsy"]
 [ext_resource type="Script" uid="uid://c35s3blrp5djy" path="res://Scenes/bomb_2.gd" id="6_ne1wf"]
 [ext_resource type="Script" uid="uid://boxkyhvdf4bdb" path="res://Scenes/bomb_3.gd" id="7_qytqt"]
 [ext_resource type="PackedScene" uid="uid://cm0rtxwjs7oxq" path="res://Scenes/Themed_Timer.tscn" id="8_jmcek"]
@@ -195,7 +195,7 @@ offset_top = -36.999996
 offset_right = 4067.0
 offset_bottom = 4059.0
 scale = Vector2(0.01435734, 0.014261573)
-texture = ExtResource("3_f6tb2")
+texture = ExtResource("4_ojqsy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="bomb" unique_id=1951107098]
 root_node = NodePath("../..")
@@ -218,7 +218,7 @@ offset_top = -36.999996
 offset_right = 4067.0
 offset_bottom = 4059.0
 scale = Vector2(0.01435734, 0.014261573)
-texture = ExtResource("3_f6tb2")
+texture = ExtResource("4_ojqsy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="bomb2" unique_id=1252767824]
 root_node = NodePath("../..")
@@ -240,7 +240,7 @@ offset_top = -36.999996
 offset_right = 4067.0
 offset_bottom = 4059.0
 scale = Vector2(0.01435734, 0.014261573)
-texture = ExtResource("3_f6tb2")
+texture = ExtResource("4_ojqsy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="bomb3" unique_id=561333893]
 root_node = NodePath("../..")
@@ -254,6 +254,6 @@ shape = SubResource("CircleShape2D_jq57m")
 
 [node name="Themed Timer" parent="." unique_id=37523068 instance=ExtResource("8_jmcek")]
 
-[connection signal="bomb_collected" from="bomb" to="." method="_on_bomb_bomb_collected"]
-[connection signal="bomb_collected" from="bomb2" to="." method="_on_bomb_2_bomb_collected"]
-[connection signal="bomb_collected" from="bomb3" to="." method="_on_bomb_3_bomb_collected"]
+[connection signal="bomb_collected" from="bomb" to="." method="bomb_collect"]
+[connection signal="bomb_collected" from="bomb2" to="." method="bomb_collect"]
+[connection signal="bomb_collected" from="bomb3" to="." method="bomb_collect"]
