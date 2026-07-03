@@ -49,9 +49,9 @@ offset_right = 663.0
 offset_bottom = 373.0
 theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 theme_override_font_sizes/normal_font_size = 42
-text = "Level: #"
+text = "Level: # +"
 
-[node name="Timer" type="RichTextLabel" parent="." unique_id=1648112323]
+[node name="timer" type="RichTextLabel" parent="." unique_id=1648112323]
 offset_left = 525.0
 offset_top = 439.0
 offset_right = 748.0

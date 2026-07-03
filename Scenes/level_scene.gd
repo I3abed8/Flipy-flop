@@ -7,11 +7,13 @@ extends Node2D
 @onready var bomb_4: TextureRect = $"Bomb Container/Bomb4"
 @onready var bomb_5: TextureRect = $"Bomb Container/Bomb5"
 @onready var level: RichTextLabel = $Level
-@onready var timer: RichTextLabel = $Timer
+@onready var timer: RichTextLabel = $timer
 
 var time
 
 func _ready() -> void:
+	if Global.lives == 0:
+		get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
 	await Timer(5.0) # using the function created
 	
 	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
