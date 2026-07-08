@@ -25,7 +25,6 @@ func _process(delta: float) -> void: # running every frame brochacho
 		if Global.minigames_done > 3: # we access a global script and see how many minigames have been compeleted
 			get_tree().change_scene_to_file("res://scenes/done_screen.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
 		else:
-			Global.minigames_done += 1
 			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn") # go back to the intermission scene
 			
 			

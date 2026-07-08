@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dam6bvg3vx65n"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a627d"]
+load_path = "res://.godot/imported/abstract-luxury-gold-yellow-gradient-studio-wall-well-use-as-background-layout-banner-product-presentation.jpg-ce8071be076bed4722eba5d0616520ee.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=181442968]
+
+[node name="Scrolling Background" type="Parallax2D" parent="." unique_id=52723711]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="Scrolling Background" unique_id=1605324187]
+offset_top = -2.000001
+offset_right = 6000.0
+offset_bottom = 3900.7573
+scale = Vector2(0.19186775, 0.2085018)
+texture = SubResource("CompressedTexture2D_a627d")

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://sk5mn1fu0i56"]
+
+[ext_resource type="Script" uid="uid://bsks28fmtu3v5" path="res://Scenes/minigame_2.gd" id="1_dfb65"]
+[ext_resource type="Texture2D" uid="uid://by3sw3l2hcr0f" path="res://icons8-apple-96.png" id="1_he4ew"]
+[ext_resource type="PackedScene" uid="uid://cm0rtxwjs7oxq" path="res://Scenes/Themed_Timer.tscn" id="2_l4g8r"]
+[ext_resource type="Script" uid="uid://bi5k1adeqenan" path="res://Scenes/button_1.gd" id="3_rfxq2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dfb65"]
+load_path = "res://.godot/imported/abstract-luxury-gold-yellow-gradient-studio-wall-well-use-as-background-layout-banner-product-presentation.jpg-ce8071be076bed4722eba5d0616520ee.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=588636958]
+script = ExtResource("1_dfb65")
+
+[node name="Scrolling Background" type="Parallax2D" parent="." unique_id=2115988668]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="Scrolling Background" unique_id=1425657413]
+offset_top = -2.000001
+offset_right = 6000.0
+offset_bottom = 3900.7573
+scale = Vector2(0.19186775, 0.2085018)
+texture = SubResource("CompressedTexture2D_dfb65")
+
+[node name="button_1" type="TextureButton" parent="." unique_id=1159198482]
+offset_left = 134.0
+offset_top = 158.0
+offset_right = 266.0
+offset_bottom = 278.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
+[node name="button_2" type="TextureButton" parent="." unique_id=1433845577]
+offset_left = 242.0
+offset_top = 483.0
+offset_right = 374.0
+offset_bottom = 603.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
+[node name="button_3" type="TextureButton" parent="." unique_id=832324254]
+offset_left = 944.0
+offset_top = 387.0
+offset_right = 1076.0
+offset_bottom = 507.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
+[node name="button_4" type="TextureButton" parent="." unique_id=807187010]
+offset_left = 587.0
+offset_top = 249.0
+offset_right = 719.0
+offset_bottom = 369.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
+[node name="Themed Timer" parent="." unique_id=37523068 instance=ExtResource("2_l4g8r")]
+position = Vector2(864, -9)
+
+[node name="prompt" type="RichTextLabel" parent="." unique_id=2107952158]
+clip_contents = false
+offset_left = 64.0
+offset_top = 27.0
+offset_right = 1364.0
+offset_bottom = 92.0
+theme_override_constants/outline_size = 42
+theme_override_font_sizes/normal_font_size = 50
+text = "CLICK AS FAST AS POSSIBLE!"
+
+[connection signal="pressed" from="button_1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="button_2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="button_3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="button_4" to="." method="_on_button_4_pressed"]
