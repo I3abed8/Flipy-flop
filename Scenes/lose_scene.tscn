@@ -1,3 +1,56 @@
 [gd_scene format=3 uid="uid://cf0hfxaw4kde0"]
 
+[ext_resource type="Script" uid="uid://colvqj6ceto8q" path="res://Scenes/lose_scene.gd" id="1_bat8a"]
+[ext_resource type="Texture2D" uid="uid://djnbu1rxo1bjf" path="res://black-screen-image_background_1920x1080.png" id="1_gl6ei"]
+[ext_resource type="FontFile" uid="uid://cb8oswv414igc" path="res://ARCADECLASSIC.TTF" id="2_bat8a"]
+
 [node name="Node2D" type="Node2D" unique_id=2034404843]
+script = ExtResource("1_bat8a")
+
+[node name="background" type="TextureRect" parent="." unique_id=2092380851]
+offset_right = 6000.0
+offset_bottom = 3850.0
+scale = Vector2(0.19148628, 0.1676871)
+texture = ExtResource("1_gl6ei")
+
+[node name="game over" type="RichTextLabel" parent="." unique_id=419675974]
+clip_contents = false
+offset_left = 258.0
+offset_top = 123.0
+offset_right = 1001.0
+offset_bottom = 258.0
+theme_override_constants/outline_size = 42
+theme_override_fonts/normal_font = ExtResource("2_bat8a")
+theme_override_font_sizes/normal_font_size = 130
+text = "GAME OVER"
+
+[node name="play again?" type="RichTextLabel" parent="." unique_id=1005929343]
+clip_contents = false
+offset_left = 355.0
+offset_top = 235.0
+offset_right = 760.0
+offset_bottom = 339.0
+theme_override_fonts/normal_font = ExtResource("2_bat8a")
+theme_override_font_sizes/normal_font_size = 70
+text = "Play again?"
+
+[node name="Start" type="Button" parent="." unique_id=1504324526]
+offset_left = 350.0
+offset_top = 361.0
+offset_right = 523.0
+offset_bottom = 420.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Yes"
+
+[node name="Quit" type="Button" parent="." unique_id=1559363330]
+offset_left = 598.0
+offset_top = 360.0
+offset_right = 772.0
+offset_bottom = 421.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "No"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
