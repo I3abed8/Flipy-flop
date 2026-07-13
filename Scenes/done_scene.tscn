@@ -1,3 +1,56 @@
 [gd_scene format=3 uid="uid://bfsou5om5snta"]
 
+[ext_resource type="Script" uid="uid://b1bbr7rmd46jp" path="res://Scenes/done_scene.gd" id="1_8kkf3"]
+[ext_resource type="Texture2D" uid="uid://djnbu1rxo1bjf" path="res://black-screen-image_background_1920x1080.png" id="2_yj15t"]
+[ext_resource type="FontFile" uid="uid://cb8oswv414igc" path="res://ARCADECLASSIC.TTF" id="3_3u2hx"]
+
 [node name="Node2D" type="Node2D" unique_id=705627790]
+script = ExtResource("1_8kkf3")
+
+[node name="background" type="TextureRect" parent="." unique_id=291806829]
+offset_right = 6000.0
+offset_bottom = 3850.0
+scale = Vector2(0.19148628, 0.1676871)
+texture = ExtResource("2_yj15t")
+
+[node name="game over" type="RichTextLabel" parent="." unique_id=380853124]
+clip_contents = false
+offset_left = 308.0
+offset_top = 115.0
+offset_right = 856.0
+offset_bottom = 250.0
+theme_override_constants/outline_size = 42
+theme_override_fonts/normal_font = ExtResource("3_3u2hx")
+theme_override_font_sizes/normal_font_size = 130
+text = "YOU WON!"
+
+[node name="play again?" type="RichTextLabel" parent="." unique_id=1516861290]
+clip_contents = false
+offset_left = 355.0
+offset_top = 235.0
+offset_right = 760.0
+offset_bottom = 339.0
+theme_override_fonts/normal_font = ExtResource("3_3u2hx")
+theme_override_font_sizes/normal_font_size = 70
+text = "Play again?"
+
+[node name="Start" type="Button" parent="." unique_id=376958782]
+offset_left = 350.0
+offset_top = 361.0
+offset_right = 523.0
+offset_bottom = 420.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Yes"
+
+[node name="Quit" type="Button" parent="." unique_id=1434393583]
+offset_left = 598.0
+offset_top = 360.0
+offset_right = 772.0
+offset_bottom = 421.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "No"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
