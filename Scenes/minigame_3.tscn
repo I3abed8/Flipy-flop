@@ -1,9 +1,41 @@
 [gd_scene format=3 uid="uid://dam6bvg3vx65n"]
 
+[ext_resource type="Script" uid="uid://cpgvd5bgqnwg4" path="res://Scenes/bird.gd" id="1_asmx3"]
+[ext_resource type="Texture2D" uid="uid://bxscrq1n0m4dl" path="res://Fantasy-Pipe-Flappy-Bird-Game-World-PNG.png" id="2_h40nw"]
+[ext_resource type="Texture2D" uid="uid://61twu4h11smh" path="res://bird_sprite.png" id="2_we0jk"]
+[ext_resource type="Script" uid="uid://d0rjl7x7ysahi" path="res://Scenes/end_goal.gd" id="3_ihkhm"]
+[ext_resource type="Script" uid="uid://ck8itco0sl1lb" path="res://Scenes/fall.gd" id="6_lr4ld"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a627d"]
 load_path = "res://.godot/imported/abstract-luxury-gold-yellow-gradient-studio-wall-well-use-as-background-layout-banner-product-presentation.jpg-ce8071be076bed4722eba5d0616520ee.ctex"
 
-[node name="Node2D" type="Node2D" unique_id=181442968]
+[sub_resource type="CircleShape2D" id="CircleShape2D_oih27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wreej"]
+size = Vector2(82.5, 211.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oih27"]
+size = Vector2(83, 273)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12i7i"]
+size = Vector2(84, 346.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jq57m"]
+size = Vector2(85.5, 173)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpqxo"]
+size = Vector2(87, 204)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7ufr"]
+size = Vector2(90, 322)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75boc"]
+size = Vector2(70, 649.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqusb"]
+size = Vector2(924, 27)
+
+[node name="Main" type="Node2D" unique_id=181442968]
 
 [node name="Scrolling Background" type="Parallax2D" parent="." unique_id=52723711]
 repeat_size = Vector2(1000, 0)
@@ -15,3 +47,104 @@ offset_right = 6000.0
 offset_bottom = 3900.7573
 scale = Vector2(0.19186775, 0.2085018)
 texture = SubResource("CompressedTexture2D_a627d")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1987453406]
+script = ExtResource("1_asmx3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=167197475]
+texture = ExtResource("2_we0jk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=105441063]
+shape = SubResource("CircleShape2D_oih27")
+
+[node name="Pipe" type="Node2D" parent="." unique_id=1908856555]
+
+[node name="pipepair1" type="StaticBody2D" parent="Pipe" unique_id=1532390864]
+
+[node name="top" type="Sprite2D" parent="Pipe/pipepair1" unique_id=1266171100]
+position = Vector2(353.65625, 109.64062)
+scale = Vector2(0.33490846, 0.41918522)
+texture = ExtResource("2_h40nw")
+
+[node name="bottom" type="Sprite2D" parent="Pipe/pipepair1" unique_id=1213643478]
+position = Vector2(359, 510)
+rotation = 3.1326442
+scale = Vector2(0.3471558, 0.5493908)
+texture = ExtResource("2_h40nw")
+
+[node name="top2" type="CollisionShape2D" parent="Pipe/pipepair1" unique_id=917914218]
+position = Vector2(356.75, 108.25)
+shape = SubResource("RectangleShape2D_wreej")
+
+[node name="bottom2" type="CollisionShape2D" parent="Pipe/pipepair1" unique_id=1728686147]
+position = Vector2(359, 510)
+shape = SubResource("RectangleShape2D_oih27")
+
+[node name="pipepair2" type="StaticBody2D" parent="Pipe" unique_id=869304944]
+
+[node name="top" type="Sprite2D" parent="Pipe/pipepair2" unique_id=47013603]
+position = Vector2(688, 170)
+scale = Vector2(0.34222558, 0.6687016)
+texture = ExtResource("2_h40nw")
+
+[node name="bottom" type="Sprite2D" parent="Pipe/pipepair2" unique_id=656058600]
+position = Vector2(692.0292, 562.2606)
+rotation = 3.1326442
+scale = Vector2(0.3424311, 0.33183792)
+texture = ExtResource("2_h40nw")
+
+[node name="top2" type="CollisionShape2D" parent="Pipe/pipepair2" unique_id=1521651684]
+position = Vector2(690, 166.75)
+shape = SubResource("RectangleShape2D_12i7i")
+
+[node name="bottom2" type="CollisionShape2D" parent="Pipe/pipepair2" unique_id=1044232827]
+position = Vector2(693.25, 567)
+shape = SubResource("RectangleShape2D_jq57m")
+
+[node name="pipepair3" type="StaticBody2D" parent="Pipe" unique_id=1957862001]
+
+[node name="top" type="Sprite2D" parent="Pipe/pipepair3" unique_id=670922857]
+position = Vector2(1027, 97.80811)
+scale = Vector2(0.3704748, 0.39384183)
+texture = ExtResource("2_h40nw")
+
+[node name="bottom" type="Sprite2D" parent="Pipe/pipepair3" unique_id=1747222742]
+position = Vector2(1032.437, 491.25162)
+rotation = 3.1326442
+scale = Vector2(0.3516642, 0.63396424)
+texture = ExtResource("2_h40nw")
+
+[node name="top2" type="CollisionShape2D" parent="Pipe/pipepair3" unique_id=1708819119]
+position = Vector2(1027.5, 92)
+shape = SubResource("RectangleShape2D_mpqxo")
+
+[node name="bottom2" type="CollisionShape2D" parent="Pipe/pipepair3" unique_id=894878216]
+position = Vector2(1031, 488)
+shape = SubResource("RectangleShape2D_o7ufr")
+
+[node name="EndGoal" type="Area2D" parent="." unique_id=1947523936]
+position = Vector2(813, 247)
+script = ExtResource("3_ihkhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndGoal" unique_id=947197092]
+position = Vector2(305, 76.25)
+shape = SubResource("RectangleShape2D_75boc")
+
+[node name="fall" type="Area2D" parent="." unique_id=1033179881]
+script = ExtResource("6_lr4ld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fall" unique_id=2053684343]
+position = Vector2(497.5, 633.5)
+shape = SubResource("RectangleShape2D_aqusb")
+
+[node name="fall2" type="Area2D" parent="." unique_id=1764987263]
+position = Vector2(-6, -621)
+script = ExtResource("6_lr4ld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fall2" unique_id=225203553]
+position = Vector2(529, 633.5)
+shape = SubResource("RectangleShape2D_aqusb")
+
+[connection signal="body_entered" from="EndGoal" to="Player" method="_on_end_goal_body_entered"]
+[connection signal="body_entered" from="fall" to="Player" method="_on_fall_body_entered"]
+[connection signal="body_entered" from="fall2" to="Player" method="_on_fall_body_entered"]

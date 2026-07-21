@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bsks28fmtu3v5" path="res://Scenes/minigame_2.gd" id="1_dfb65"]
 [ext_resource type="Texture2D" uid="uid://by3sw3l2hcr0f" path="res://icons8-apple-96.png" id="1_he4ew"]
 [ext_resource type="PackedScene" uid="uid://cm0rtxwjs7oxq" path="res://Scenes/Themed_Timer.tscn" id="2_l4g8r"]
+[ext_resource type="Texture2D" uid="uid://burkqpptxae66" path="res://clipart_tree.png" id="2_rfxq2"]
 [ext_resource type="Script" uid="uid://bi5k1adeqenan" path="res://Scenes/button_1.gd" id="3_rfxq2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dfb65"]
@@ -22,35 +23,51 @@ offset_bottom = 3900.7573
 scale = Vector2(0.19186775, 0.2085018)
 texture = SubResource("CompressedTexture2D_dfb65")
 
+[node name="tree" type="TextureRect" parent="." unique_id=96431031]
+offset_left = -83.00001
+offset_top = 146.00002
+offset_right = 2637.0
+offset_bottom = 2146.0
+scale = Vector2(0.24721189, 0.2582993)
+texture = ExtResource("2_rfxq2")
+
+[node name="tree2" type="TextureRect" parent="." unique_id=774258609]
+offset_left = 471.99994
+offset_top = 154.0
+offset_right = 3192.0
+offset_bottom = 2154.0
+scale = Vector2(0.24721189, 0.2582993)
+texture = ExtResource("2_rfxq2")
+
 [node name="button_1" type="TextureButton" parent="." unique_id=1159198482]
-offset_left = 134.0
-offset_top = 158.0
-offset_right = 266.0
-offset_bottom = 278.0
+offset_left = 147.0
+offset_top = 228.0
+offset_right = 279.0
+offset_bottom = 348.0
 texture_normal = ExtResource("1_he4ew")
 script = ExtResource("3_rfxq2")
 
 [node name="button_2" type="TextureButton" parent="." unique_id=1433845577]
-offset_left = 242.0
-offset_top = 483.0
-offset_right = 374.0
-offset_bottom = 603.0
+offset_left = 250.0
+offset_top = 354.0
+offset_right = 382.0
+offset_bottom = 474.0
 texture_normal = ExtResource("1_he4ew")
 script = ExtResource("3_rfxq2")
 
 [node name="button_3" type="TextureButton" parent="." unique_id=832324254]
-offset_left = 944.0
-offset_top = 387.0
-offset_right = 1076.0
-offset_bottom = 507.0
+offset_left = 824.0
+offset_top = 374.0
+offset_right = 956.0
+offset_bottom = 494.0
 texture_normal = ExtResource("1_he4ew")
 script = ExtResource("3_rfxq2")
 
 [node name="button_4" type="TextureButton" parent="." unique_id=807187010]
-offset_left = 587.0
-offset_top = 249.0
-offset_right = 719.0
-offset_bottom = 369.0
+offset_left = 717.0
+offset_top = 228.0
+offset_right = 849.0
+offset_bottom = 348.0
 texture_normal = ExtResource("1_he4ew")
 script = ExtResource("3_rfxq2")
 
@@ -65,7 +82,7 @@ offset_right = 1364.0
 offset_bottom = 92.0
 theme_override_constants/outline_size = 42
 theme_override_font_sizes/normal_font_size = 50
-text = "CLICK AS FAST AS POSSIBLE!"
+text = "COLLECT APPLES  AS FAST AS POSSIBLE!"
 
 [connection signal="pressed" from="button_1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="button_2" to="." method="_on_button_2_pressed"]
