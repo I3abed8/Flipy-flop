@@ -18,7 +18,8 @@ func _physics_process(delta):
 
 func _on_end_goal_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		if Global.minigames_done > 2:
+		Global.minigames_done += 1
+		if Global.minigames_done > 3:
 			get_tree().change_scene_to_file("res://Scenes/done_scene.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
@@ -26,4 +27,6 @@ func _on_end_goal_body_entered(body: Node2D) -> void:
 
 func _on_fall_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		Global.minigames_done -=1 #go back a minigame
+		Global.lives -= 1 # lose ur lives
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")

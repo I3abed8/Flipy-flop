@@ -72,7 +72,7 @@ texture_normal = ExtResource("1_he4ew")
 script = ExtResource("3_rfxq2")
 
 [node name="Themed Timer" parent="." unique_id=37523068 instance=ExtResource("2_l4g8r")]
-position = Vector2(864, -9)
+position = Vector2(868, 42)
 
 [node name="prompt" type="RichTextLabel" parent="." unique_id=2107952158]
 clip_contents = false
